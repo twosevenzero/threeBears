@@ -1,0 +1,27 @@
+{
+  "name": "threeBears",
+  "title": "jQuery threeBears",
+  "description": "Making sure your text always fits just right.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/twosevenzero/threeBears",
+  "author": {
+    "name": "Dave West",
+    "email": "dave@twosevenzero.com",
+    "url": "https://github.com/twosevenzero"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/twosevenzero/threeBears.git"
+  },
+  "bugs": "https://github.com/twosevenzero/threeBears/issues",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/twosevenzero/threeBears/blob/master/LICENSE-MIT"
+    }
+  ],
+  "dependencies": {
+    "jquery": "*"
+  },
+  "keywords": []
+}
