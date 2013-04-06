@@ -29,7 +29,8 @@
                 $('<div class="threeBearsTest">').css({
                     'position': 'absolute',
                     'top': '-99999px',
-                    'left': '-99999px'
+                    'left': '-99999px',
+                    'display': 'inline'
                 }).appendTo('body');
             }
         },
@@ -64,7 +65,7 @@
         },
 
         updateElemFontSize: function() {
-            this.$elem.css('font-size', this.newFontSize);
+            return this.$elem.css('font-size', this.newFontSize);
         }
 
     };
