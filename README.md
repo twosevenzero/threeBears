@@ -15,7 +15,7 @@ In your web page:
 <script src="dist/threeBears.min.js"></script>
 <script>
 jQuery(function($) {
-  $(.your-element).threeBears();
+  $('.your-element').threeBears();
 });
 </script>
 ```
