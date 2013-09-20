@@ -55,7 +55,10 @@
                 testDivWidth = testDiv.width(),
                 testDivFontSize = parseInt(testDiv.css('font-size'), 10);
 
-            while( testDivWidth >= this.elemWidth ) {
+            while ( testDivWidth >= this.elemWidth ) {
+                if ( testDivFontSize === this.minFontSize ) {
+                    break; 
+                }
                 testDivFontSize = testDivFontSize - 1;
                 $('div.threeBearsTest').css('font-size', testDivFontSize);
                 testDivWidth = testDiv.width();

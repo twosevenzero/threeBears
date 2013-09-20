@@ -1,4 +1,4 @@
-/*! jQuery threeBears - v0.1.0 - 2013-04-05
+/*! jQuery threeBears - v0.1.0 - 2013-09-20
 * https://github.com/twosevenzero/threeBears
 * Copyright (c) 2013 Dave West; Licensed MIT */
 (function($) {
@@ -50,7 +50,10 @@
                 testDivWidth = testDiv.width(),
                 testDivFontSize = parseInt(testDiv.css('font-size'), 10);
 
-            while( testDivWidth >= this.elemWidth ) {
+            while ( testDivWidth >= this.elemWidth ) {
+                if ( testDivFontSize === this.minFontSize ) {
+                    break; 
+                }
                 testDivFontSize = testDivFontSize - 1;
                 $('div.threeBearsTest').css('font-size', testDivFontSize);
                 testDivWidth = testDiv.width();
