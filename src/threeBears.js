@@ -13,7 +13,6 @@
         init: function(elem, config) {
             this.$elem  = $(elem);
             this.config = $.extend({}, $.fn.threeBears.defaults, config);
-            this.minFontSize = this.config.minFontSize;
             this.elemText = this.$elem.text();
             this.elemWidth = this.$elem.width();
 
@@ -55,8 +54,12 @@
                 testDivWidth = testDiv.width(),
                 testDivFontSize = parseInt(testDiv.css('font-size'), 10);
 
+            if ( testDivFontSize > this.config.maxFontSize ) {
+                testDivFontSize = this.config.maxFontSize + 1;
+            }
+
             while ( testDivWidth >= this.elemWidth ) {
-                if ( testDivFontSize === this.minFontSize ) {
+                if ( testDivFontSize === this.config.minFontSize ) {
                     break; 
                 }
                 testDivFontSize = testDivFontSize - 1;
@@ -82,7 +85,8 @@
     };
 
     $.fn.threeBears.defaults = {
-        minFontSize: 10
+        minFontSize: 10,
+        maxFontSize: 30
     };
 
 
